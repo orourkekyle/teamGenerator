@@ -13,8 +13,6 @@ const outputFile = path.join(OUTPUT_DIR, "team.html");
 const render = require("./lib/htmlRenderer");
 const team = [];
 
-// Write code to use inquirer to gather information about the development team members,
-// and to create objects for each team member (using the correct classes as blueprints!)
 function askQuestions() {
     inquirer.prompt([
         {
@@ -88,13 +86,11 @@ function askQuestions() {
                             return addMore();
                         })
                     };
-                    // render(team);
                 } else {
                     console.log("Please enter a valid email address.");
                     checkEmail();
                 };
             })
-            // askQuestions();        
         }
         checkEmail();
     })
